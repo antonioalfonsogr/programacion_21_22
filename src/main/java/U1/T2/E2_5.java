@@ -8,6 +8,6 @@ public class E2_5 {
         System.out.println("Introduce temperatura en ªC");
         int num1 = teclado.nextInt();
         int num2 = ((9*num1)/5)+32;
-        System.out.println( num1 + "ªC son: " + num2 + "ºK");
+        System.out.println( num1 + "ªC son: " + num2 + "ºF");
     }
 }
