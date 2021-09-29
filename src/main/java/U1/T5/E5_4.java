@@ -8,14 +8,16 @@ public class E5_4 {
         System.out.println("Introduzca el primer número");
         int num1 = teclado.nextInt();
         byte pares = 0;
-        if ((num1%2)==0) {pares++;
+        if ((num1 % 2) == 0) {
+            pares++;
         }
         System.out.println("Introduzca el segundo número");
         int num2 = teclado.nextInt();
-        if ((num2%2)==0) {pares++;
+        if ((num2 % 2) == 0) {
+            pares++;
             System.out.println("Ha introducido " + pares + " números pares");
-        }
-        else {System.out.println("Ha introducido " + pares + " números pares");
+        } else {
+            System.out.println("Ha introducido " + pares + " números pares");
         }
     }
 }

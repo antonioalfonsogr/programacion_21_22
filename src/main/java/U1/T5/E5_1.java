@@ -7,9 +7,10 @@ public class E5_1 {
         Scanner teclado = new Scanner(System.in);
         System.out.println("Escriba un número entero");
         int num1 = teclado.nextInt();
-        if (num1>0) {System.out.println(num1 + " es positivo");
-        }
-        else {System.out.println(num1 + " es negativo");
+        if (num1 > 0) {
+            System.out.println(num1 + " es positivo");
+        } else {
+            System.out.println(num1 + " es negativo");
         }
     }
 }
