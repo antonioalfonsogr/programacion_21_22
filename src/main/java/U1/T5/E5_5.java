@@ -1,4 +1,4 @@
-/*package U1.T5;
+package U1.T5;
 
 import java.util.Scanner;
 
@@ -11,10 +11,14 @@ public class E5_5 {
         long num2 = teclado.nextLong();
         System.out.println("Introduzca el tercer número");
         long num3 = teclado.nextLong();
-        if (num1>num2) {long mayor = num1;
+        long mayor;
+        if (num1>num2) {mayor = num1;
         }
-
-
+        else {mayor = num2;
+        }
+        if (num3>mayor) {System.out.println("El número mayor es " + num3);
+        }
+        else {System.out.println("El número mayor es " + mayor);
+        }
     }
 }
-*/
