@@ -2,6 +2,9 @@ package U1.T3;
 
 import java.util.Scanner;
 
+// Crea un programa que pida al usuario su año de nacimiento y el año actual (usando datos de tipo
+// short) y halle la diferencia de ambos para obtener su edad.
+
 public class E3_2 {
   public static void main(String[] args) {
     Scanner teclado = new Scanner(System.in);

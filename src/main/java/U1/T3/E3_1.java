@@ -2,6 +2,9 @@ package U1.T3;
 
 import java.util.Scanner;
 
+// Crea un programa que calcule y muestre la suma de dos números de dos cifras (de tipo byte) que
+// introduzca el usuario.
+
 public class E3_1 {
   public static void main(String[] args) {
     Scanner teclado = new Scanner(System.in);

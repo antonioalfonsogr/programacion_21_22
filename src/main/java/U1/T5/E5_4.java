@@ -2,6 +2,8 @@ package U1.T5;
 
 import java.util.Scanner;
 
+// Crea un programa que pida al usuario dos números enteros y cuántos de ellos son pares.
+
 public class E5_4 {
   public static void main(String[] args) {
     Scanner teclado = new Scanner(System.in);

@@ -2,6 +2,9 @@ package U1.T5II;
 
 import java.util.Scanner;
 
+// Escribe un programa que dada una hora determinada (horas y minutos), calcule los segundos que
+// faltan para llegar a la medianoche.
+
 public class E5II_10 {
   public static void main(String[] args) {
     Scanner teclado = new Scanner(System.in);

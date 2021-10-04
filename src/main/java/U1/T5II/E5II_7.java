@@ -2,6 +2,9 @@ package U1.T5II;
 
 import java.util.Scanner;
 
+// Amplía el programa anterior para que diga la nota del boletín (insuficiente, suficiente, bien,
+// notable o sobresaliente).
+
 public class E5II_7 {
   public static void main(String[] args) {
     Scanner teclado = new Scanner(System.in);

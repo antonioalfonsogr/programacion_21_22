@@ -2,6 +2,9 @@ package U1.T5;
 
 import java.util.Scanner;
 
+// Crea un programa que pida al usuario que introduzca el número 12. Después debe decirle si lo ha
+// hecho correctamente o no.
+
 public class E5_2 {
   public static void main(String[] args) {
     Scanner teclado = new Scanner(System.in);

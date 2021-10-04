@@ -2,6 +2,9 @@ package U1.T5II;
 
 import java.util.Scanner;
 
+// Escribe un programa que pida por teclado un día de la semana y que diga qué asignatura toca a
+// primera hora ese día.
+
 public class E5II_1 {
   public static void main(String[] args) {
     Scanner teclado = new Scanner(System.in);

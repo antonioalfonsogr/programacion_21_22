@@ -2,6 +2,8 @@ package U1.T5II;
 
 import java.util.Scanner;
 
+// Escribe un programa que nos diga el horóscopo a partir del día y el mes de nacimiento.
+
 public class E5II_9 {
   public static void main(String[] args) {
     Scanner teclado = new Scanner(System.in);

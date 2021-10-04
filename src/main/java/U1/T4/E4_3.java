@@ -2,6 +2,9 @@ package U1.T4;
 
 import java.util.Scanner;
 
+// Modificar el ejercicio anterior para que muestre la parte entera de la media de tres notas
+// decimales.
+
 public class E4_3 {
   public static void main(String[] args) {
     Scanner teclado = new Scanner(System.in);

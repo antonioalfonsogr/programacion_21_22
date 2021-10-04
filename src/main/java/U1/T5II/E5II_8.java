@@ -2,6 +2,8 @@ package U1.T5II;
 
 import java.util.Scanner;
 
+// Realiza un programa que resuelva una ecuación de segundo grado (del tipo ax2 + bx + c = 0).
+
 public class E5II_8 {
   public static void main(String[] args) {
     Scanner teclado = new Scanner(System.in);

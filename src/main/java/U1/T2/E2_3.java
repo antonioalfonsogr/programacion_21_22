@@ -2,6 +2,9 @@ package U1.T2;
 
 import java.util.Scanner;
 
+// Crea un programa que calcule y muestre la división de dos números enteros introducidos por el
+// usuario.
+
 public class E2_3 {
   public static void main(String[] args) {
     Scanner teclado = new Scanner(System.in);

@@ -1,4 +1,3 @@
-// no terminado
 package U1.T5II;
 
 import java.util.Scanner;
@@ -30,6 +29,7 @@ import java.util.Scanner;
 // • Puntuación entre 22 y 30: Tu pareja tiene todos los ingredientes para estar viviendo un romance
 // con otra persona. Te aconsejamos que indagues un poco más y averigües que es lo que está pasando
 // por su cabeza.
+
 public class E5II_15 {
   public static void main(String[] args) {
     Scanner teclado = new Scanner(System.in);
@@ -37,10 +37,67 @@ public class E5II_15 {
     System.out.println("Contesta las siguientes preguntas con true o false");
     System.out.println(
         "Tu pareja parece estar más inquieta de lo normal sin ningún motivo aparente.");
-    boolean pregunta = teclado.nextBoolean();
-    if (pregunta == true) {
+    boolean pregunta1 = teclado.nextBoolean();
+    if (pregunta1 == true) {
       puntuacion = puntuacion + 3;
     }
-    System.out.println(puntuacion);
+    System.out.println("Ha aumentado sus gastos de vestuario.");
+    boolean pregunta2 = teclado.nextBoolean();
+    if (pregunta2 == true) {
+      puntuacion = puntuacion + 3;
+    }
+    System.out.println("Ha perdido el interés que mostraba anteriormente por ti.");
+    boolean pregunta3 = teclado.nextBoolean();
+    if (pregunta3 == true) {
+      puntuacion = puntuacion + 3;
+    }
+    System.out.println(
+        "Ahora se afeita y se asea con más frecuencia (si es hombre) o ahora se arregla el pelo y se asea con más frecuencia (si es mujer).");
+    boolean pregunta4 = teclado.nextBoolean();
+    if (pregunta4 == true) {
+      puntuacion = puntuacion + 3;
+    }
+    System.out.println("No te deja que mires la agenda de su teléfono móvil.");
+    boolean pregunta5 = teclado.nextBoolean();
+    if (pregunta5 == true) {
+      puntuacion = puntuacion + 3;
+    }
+    System.out.println(
+        "A veces tiene llamadas que dice no querer contestar cuando estás tú delante.");
+    boolean pregunta6 = teclado.nextBoolean();
+    if (pregunta6 == true) {
+      puntuacion = puntuacion + 3;
+    }
+    System.out.println("Últimamente se preocupa más en cuidar la línea y/o estar bronceado/a.");
+    boolean pregunta7 = teclado.nextBoolean();
+    if (pregunta7 == true) {
+      puntuacion = puntuacion + 3;
+    }
+    System.out.println(
+        "Muchos días viene tarde después de trabajar porque dice tener mucho más trabajo.");
+    boolean pregunta8 = teclado.nextBoolean();
+    if (pregunta8 == true) {
+      puntuacion = puntuacion + 3;
+    }
+    System.out.println("Has notado que últimamente se perfuma más.");
+    boolean pregunta9 = teclado.nextBoolean();
+    if (pregunta9 == true) {
+      puntuacion = puntuacion + 3;
+    }
+    System.out.println("Se confunde y te dice que ha estado en sitios donde no ha ido contigo.");
+    boolean pregunta10 = teclado.nextBoolean();
+    if (pregunta10 == true) {
+      puntuacion = puntuacion + 3;
+    }
+    if (puntuacion <= 10) {
+      System.out.println("¡Enhorabuena! tu pareja parece ser totalmente fiel.");
+    } else if (puntuacion <= 22) {
+      System.out.println(
+          "Quizás exista el peligro de otra persona en su vida o en su mente, aunque seguramente será algo sin importancia. No bajes la guardia.");
+    } else {
+      System.out.println(" ");
+      System.out.println(
+          "Tu pareja tiene todos los ingredientes para estar viviendo un romance con otra persona. Te aconsejamos que indagues un poco más y averigües que es lo que está pasando por su cabeza.");
+    }
   }
 }

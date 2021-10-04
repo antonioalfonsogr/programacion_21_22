@@ -2,6 +2,9 @@ package U1.T4;
 
 import java.util.Scanner;
 
+// Necesitamos una aplicación que calcule la media aritmética de dos notas enteras. Hay que tener en
+// cuenta que la media puede contener decimales.
+
 public class E4_2 {
   public static void main(String[] args) {
     Scanner teclado = new Scanner(System.in);

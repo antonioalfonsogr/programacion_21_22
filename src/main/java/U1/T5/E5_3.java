@@ -2,6 +2,8 @@ package U1.T5;
 
 import java.util.Scanner;
 
+// Crea un programa que diga si el número introducido por el usuario es impar o no lo es.
+
 public class E5_3 {
   public static void main(String[] args) {
     Scanner teclado = new Scanner(System.in);

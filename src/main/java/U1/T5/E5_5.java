@@ -2,6 +2,9 @@ package U1.T5;
 
 import java.util.Scanner;
 
+// Crea un programa que pida tres números enteros largos al usuario y diga cuál es el mayor de los
+// tres.
+
 public class E5_5 {
   public static void main(String[] args) {
     Scanner teclado = new Scanner(System.in);
