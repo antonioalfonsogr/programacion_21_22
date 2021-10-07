@@ -21,38 +21,35 @@ public class E5II_19 {
     int hora = teclado.nextInt();
     System.out.println("Introduzca los minutos");
     int min = teclado.nextInt();
-    int secactual;
+    int minactual;
     if (hora == 0 && min == 0) {
-      secactual = 0;
+      minactual = 0;
     } else if (hora == 0) {
-      secactual = (min * 60);
+      minactual = (min);
     } else if (min == 0) {
-      secactual = (hora * 60 * 60);
-    } else secactual = ((hora * 60 * 60) + (min * 60));
+      minactual = (hora * 60);
+    } else minactual = ((hora * 60) + (min));
     switch (dia) {
       case 1:
         System.out.println(
             "Faltan "
-                + ((4 * 24 * 60 * 60) + ((15 * 60 * 60) - secactual))
-                + " segundos para el fin de semana");
+                + ((4 * 24 * 60) + ((15 * 60) - minactual))
+                + " minutos para el fin de semana");
       case 2:
         System.out.println(
             "Faltan "
-                + ((3 * 24 * 60 * 60) + ((15 * 60 * 60) - secactual))
-                + " segundos para el fin de semana");
+                + ((3 * 24 * 60) + ((15 * 60) - minactual))
+                + " minutos para el fin de semana");
       case 3:
         System.out.println(
             "Faltan "
-                + ((2 * 24 * 60 * 60) + ((15 * 60 * 60) - secactual))
-                + " segundos para el fin de semana");
+                + ((2 * 24 * 60) + ((15 * 60) - minactual))
+                + " minutos para el fin de semana");
       case 4:
         System.out.println(
-            "Faltan "
-                + ((24 * 60 * 60) + ((15 * 60 * 60) - secactual))
-                + " segundos para el fin de semana");
+            "Faltan " + ((24 * 60) + ((15 * 60) - minactual)) + " minutos para el fin de semana");
       case 5:
-        System.out.println(
-            "Faltan " + ((15 * 60 * 60) - secactual) + " segundos para el fin de semana");
+        System.out.println("Faltan " + ((15 * 60) - minactual) + " minutos para el fin de semana");
     }
   }
 }

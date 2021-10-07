@@ -43,6 +43,74 @@ public class E5II_20 {
       } else {
         System.out.println("Tipo de iva mal introducido");
       }
+    } else if (codpromo.equals("mitad")) {
+      if (tipoiva.equals("general")) {
+        System.out.println("Base imponible: " + baseimponible);
+        System.out.println("IVA (21%): " + baseimponible * 0.21);
+        System.out.println("Precio con IVA: " + baseimponible * 1.21);
+        System.out.println("Cód.promo. (mitad): " + (baseimponible * 1.21) / -2);
+        System.out.println("Total: " + (baseimponible * 1.21) / 2);
+      } else if (tipoiva.equals("reducido")) {
+        System.out.println("Base imponible: " + baseimponible);
+        System.out.println("IVA (10%): " + baseimponible * 0.1);
+        System.out.println("Precio con IVA: " + baseimponible * 1.1);
+        System.out.println("Cód.promo. (mitad): " + (baseimponible * 1.1) / -2);
+        System.out.println("Total: " + (baseimponible * 1.1) / 2);
+      } else if (tipoiva.equals("superreducido")) {
+        System.out.println("Base imponible: " + baseimponible);
+        System.out.println("IVA (4%): " + baseimponible * 0.04);
+        System.out.println("Precio con IVA: " + baseimponible * 1.04);
+        System.out.println("Cód.promo. (mitad): " + (baseimponible * 1.04) / -2);
+        System.out.println("Total: " + (baseimponible * 1.04) / 2);
+      } else {
+        System.out.println("Tipo de iva mal introducido");
+      }
+    } else if (codpromo.equals("meno5")) {
+      if (tipoiva.equals("general")) {
+        System.out.println("Base imponible: " + baseimponible);
+        System.out.println("IVA (21%): " + baseimponible * 0.21);
+        System.out.println("Precio con IVA: " + baseimponible * 1.21);
+        System.out.println("Cód.promo. (meno5): -5");
+        System.out.println("Total: " + ((baseimponible * 1.21) - 5));
+      } else if (tipoiva.equals("reducido")) {
+        System.out.println("Base imponible: " + baseimponible);
+        System.out.println("IVA (10%): " + baseimponible * 0.1);
+        System.out.println("Precio con IVA: " + baseimponible * 1.1);
+        System.out.println("Cód.promo. (meno5): -5");
+        System.out.println("Total: " + ((baseimponible * 1.1) - 5));
+      } else if (tipoiva.equals("superreducido")) {
+        System.out.println("Base imponible: " + baseimponible);
+        System.out.println("IVA (4%): " + baseimponible * 0.04);
+        System.out.println("Precio con IVA: " + baseimponible * 1.04);
+        System.out.println("Cód.promo. (meno5): -5");
+        System.out.println("Total: " + ((baseimponible * 1.04) - 5));
+      } else {
+        System.out.println("Tipo de iva mal introducido");
+      }
+    } else if (codpromo.equals("5porc")) {
+      if (tipoiva.equals("general")) {
+        System.out.println("Base imponible: " + baseimponible);
+        System.out.println("IVA (21%): " + baseimponible * 0.21);
+        System.out.println("Precio con IVA: " + baseimponible * 1.21);
+        System.out.println("Cód.promo. (5porc): " + (baseimponible * 1.21) * -0.05);
+        System.out.println("Total: " + (baseimponible * 1.21) * 0.95);
+      } else if (tipoiva.equals("reducido")) {
+        System.out.println("Base imponible: " + baseimponible);
+        System.out.println("IVA (10%): " + baseimponible * 0.1);
+        System.out.println("Precio con IVA: " + baseimponible * 1.1);
+        System.out.println("Cód.promo. (5porc): " + (baseimponible * 1.1) * -0.05);
+        System.out.println("Total: " + (baseimponible * 1.1) * 0.95);
+      } else if (tipoiva.equals("superreducido")) {
+        System.out.println("Base imponible: " + baseimponible);
+        System.out.println("IVA (4%): " + baseimponible * 0.04);
+        System.out.println("Precio con IVA: " + baseimponible * 1.04);
+        System.out.println("Cód.promo. (5porc): " + (baseimponible * 1.04) * -0.05);
+        System.out.println("Total: " + (baseimponible * 1.04) * 0.95);
+      } else {
+        System.out.println("Tipo de iva mal introducido");
+      }
+    } else {
+      System.out.println("Código promocional mal introducido");
     }
   }
 }
