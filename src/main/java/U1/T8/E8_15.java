@@ -17,6 +17,9 @@ public class E8_15 {
 
         if (i % j == 0) {
           contadorDivisible++;
+          if (contadorDivisible > 2) {
+            break;
+          }
         }
       }
       if (contadorDivisible == 2) {
