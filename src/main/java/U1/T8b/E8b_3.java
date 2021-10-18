@@ -20,10 +20,11 @@ public class E8b_3 {
 
     System.out.print(a + ", " + b);
 
-    for (int i = 0; i < num; i++) {
-      a = a + b;
-      b = a;
-      System.out.print(", " + a);
+    for (int i = 2; i < num; i++) {
+      c = a + b;
+      System.out.print(", " + c);
+      a = b;
+      b = c;
     }
   }
 }
