@@ -19,8 +19,23 @@ public class Ej1 {
     } while (altura < 3 || altura % 2 == 0);
 
     for (int i = 0; i < altura; i++) {
-      for (int j = 0; j < (altura * 3) - 2; j++) {
-        if (j == 0 || j == 4 || i == j && i == (altura / 2)) {
+      for (int j = 0; j < altura; j++) {
+        if (j == 0
+            || j == altura - 1
+            || i == j && i <= (altura / 2)
+            || (j == (altura - 1) - i) && (i <= (altura / 2))) {
+          System.out.print("*");
+        } else {
+          System.out.print(" ");
+        }
+      }
+      for (int j = 0; j < 4; j++) {
+        System.out.print(" ");
+      }
+      for (int j = 0; j < altura; j++) {
+        if ((j == i && i <= (altura / 2))
+            || (j == (altura - 1) - i) && (i <= (altura / 2))
+            || (j == altura / 2 && i > (altura / 2))) {
           System.out.print("*");
         } else {
           System.out.print(" ");

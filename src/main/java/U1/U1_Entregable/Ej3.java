@@ -26,27 +26,67 @@ public class Ej3 {
     int numHamburguesagourmet = teclado.nextInt();
 
     System.out.println("Día de la semana");
-    String diaSemana = teclado.nextLine();
+    String diaSemana = teclado.next();
 
     System.out.println("Pertenece al club Fanegas (s/n)");
     char clubFanegas = teclado.next().charAt(0);
 
-    if (diaSemana.equals("martes")) {
+    int precioHamburguesaBasica = 3;
+    int precioHamburguesaGourmet = 5;
+    int descuento = 0;
+    int aPagar;
+    int precioTotal;
 
-    } else if (diaSemana.equals("viernes")) {
-      int precioHamburguesaBasica = 3;
-      int precioHamburguesaGourmet = 5;
-
-    } else {
-
-      int precioHamburguesaBasica = 3;
-      int precioHamburguesaGourmet = 5;
-
-      int precioTotal =
+    if (diaSemana.equals("miércoles")) {
+      precioTotal =
           (numHamburguesaBasica * precioHamburguesaBasica)
               + (numHamburguesagourmet * precioHamburguesaGourmet);
-      int descuento;
-      int aPagar;
+      int precioHamburguesaMiercoles = 2;
+      descuento =
+          (numHamburguesaBasica * precioHamburguesaBasica)
+              - (numHamburguesaBasica * precioHamburguesaMiercoles);
+      if (clubFanegas == 's') {
+        descuento = (int) (descuento + (precioTotal - descuento) * 0.12);
+        aPagar = precioTotal - descuento;
+      } else {
+        aPagar = precioTotal - descuento;
+      }
+
+    } else if (diaSemana.equals("viernes")) {
+
+      double precioGourmetViernes = 9;
+
+      precioTotal =
+          (numHamburguesaBasica * precioHamburguesaBasica)
+              + (numHamburguesagourmet * precioHamburguesaGourmet);
+
+      descuento =
+          (int)
+              (precioTotal
+                  - (((numHamburguesagourmet / 2) * precioGourmetViernes)
+                      + ((numHamburguesagourmet % 2) * precioHamburguesaGourmet)
+                      + (numHamburguesaBasica * precioHamburguesaBasica)));
+
+      if (clubFanegas == 's') {
+        descuento = (int) (descuento + (precioTotal - descuento) * 0.12);
+        aPagar = precioTotal - descuento;
+      } else {
+        aPagar = precioTotal - descuento;
+      }
+
+    } else {
+      precioTotal =
+          (numHamburguesaBasica * precioHamburguesaBasica)
+              + (numHamburguesagourmet * precioHamburguesaGourmet);
+      if (clubFanegas == 's') {
+        descuento = (int) (precioTotal * 0.12);
+        aPagar = precioTotal - descuento;
+      } else {
+        aPagar = precioTotal;
+      }
     }
+    System.out.println("Precio total: " + precioTotal);
+    System.out.println("Descuento: " + descuento);
+    System.out.println("A pagar: " + aPagar);
   }
 }
