@@ -25,8 +25,7 @@ public class Debug03 {
 
       if (num % i == 0) {
         esPrimo = false;
-      } else {
-        esPrimo = true;
+        break;
       }
     }
     return esPrimo;
