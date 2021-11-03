@@ -1,8 +1,8 @@
-package Entregable1;
+package U1.Entregable_2021_Tarde;
 
 import java.util.Scanner;
 
-public class ej4 {
+public class E_2021T_4 {
   public static void main(String[] args) {
     // Escribe un programa que pida un número entero positivo por teclado y que
     // muestre a continuación los 5 números consecutivos a partir del número

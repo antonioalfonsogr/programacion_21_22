@@ -1,8 +1,8 @@
-package Entregable1;
+package U1.Entregable_2021_Tarde;
 
 import java.util.Scanner;
 
-public class ej2 {
+public class E_2021T_2 {
   public static void main(String[] args) {
     // Escribe un programa que diga cuántos dígitos pares y cuántos dígitos impares
     // hay dentro de un número. Se recomienda usar long en lugar de int ya que el

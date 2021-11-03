@@ -1,8 +1,8 @@
-package Entregable1;
+package U1.Entregable_2021_Tarde;
 
 import java.util.Scanner;
 
-public class ej3 {
+public class E_2021T_3 {
   public static void main(String[] args) {
     // Escribe un programa que sea capaz de insertar un dígito dentro de un número
     // indicando la posición. El nuevo dígito se colocará en la posición indicada y el

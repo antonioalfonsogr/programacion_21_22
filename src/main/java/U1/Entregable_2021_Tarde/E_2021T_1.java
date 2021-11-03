@@ -1,8 +1,8 @@
-package Entregable1;
+package U1.Entregable_2021_Tarde;
 
 import java.util.Scanner;
 
-public class ej1 {
+public class E_2021T_1 {
   public static void main(String[] args) {
     // Realiza un programa que pinte por pantalla un rombo hueco hecho con
     // asteriscos. El programa debe pedir la altura. Se debe comprobar que la altura
