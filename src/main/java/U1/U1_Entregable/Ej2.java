@@ -10,41 +10,40 @@ public class Ej2 {
     // Una vez introducidos los dos números nos debe construir un número saltando las cifras según
     // indique el segundo número.
 
-    Scanner teclado = new Scanner(System.in);
+    Scanner sc = new Scanner(System.in);
 
-    int numIntroducido;
+    System.out.println("Introduzca un número: ");
+    long num = sc.nextLong();
+    int salto = 0;
 
-    System.out.println("Introduzca un número:");
-    numIntroducido = teclado.nextInt();
+    do {
+      System.out.println("Introduzca el salto: ");
+      salto = sc.nextInt();
+    } while (salto < 0 || salto > 2);
 
-    System.out.println("Introduzca el salto:");
-    int salto = teclado.nextInt();
+    long cociente = num;
+    long invertido = 0;
 
-    int numDigitos = 0;
-    int numParaDigitos = numIntroducido;
-    while (numParaDigitos > 0) {
-      numParaDigitos = numParaDigitos / 10;
-      numDigitos++;
+    while (cociente != 0) {
+      invertido = invertido * 10 + cociente % 10;
+      cociente = cociente / 10;
     }
 
-    int numResultado = 0;
-    int cociente = numIntroducido;
-    int resto;
-    int contador = 0;
+    cociente = invertido;
+    num = 0;
+    int a_saltar = 0;
 
-    for (int i = 0; cociente > 0; i++) {
-
-      // falta las condiciones de salto
-
-      if (i < 0) {
-        resto = cociente % 10;
+    while (cociente != 0) {
+      if (a_saltar == 0) {
+        num = num * 10 + cociente % 10;
         cociente = cociente / 10;
-        numResultado = (int) (numResultado + resto * Math.pow(10, contador));
-        contador++;
+        a_saltar = salto;
       } else {
         cociente = cociente / 10;
+        a_saltar--;
       }
     }
-    System.out.println("Resultado: " + numResultado);
+
+    System.out.println("Resultado = " + num);
   }
 }
