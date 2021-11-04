@@ -33,9 +33,9 @@ public class Ej3 {
 
     int precioHamburguesaBasica = 3;
     int precioHamburguesaGourmet = 5;
-    int descuento = 0;
-    int aPagar;
-    int precioTotal;
+    double descuento = 0;
+    double aPagar;
+    double precioTotal;
 
     if (diaSemana.equals("miércoles")) {
       precioTotal =
@@ -46,7 +46,7 @@ public class Ej3 {
           (numHamburguesaBasica * precioHamburguesaBasica)
               - (numHamburguesaBasica * precioHamburguesaMiercoles);
       if (clubFanegas == 's') {
-        descuento = (int) (descuento + (precioTotal - descuento) * 0.12);
+        descuento = (descuento + (precioTotal - descuento) * 0.12);
         aPagar = precioTotal - descuento;
       } else {
         aPagar = precioTotal - descuento;
@@ -61,14 +61,13 @@ public class Ej3 {
               + (numHamburguesagourmet * precioHamburguesaGourmet);
 
       descuento =
-          (int)
-              (precioTotal
-                  - (((numHamburguesagourmet / 2) * precioGourmetViernes)
-                      + ((numHamburguesagourmet % 2) * precioHamburguesaGourmet)
-                      + (numHamburguesaBasica * precioHamburguesaBasica)));
+          (precioTotal
+              - (((numHamburguesagourmet / 2) * precioGourmetViernes)
+                  + ((numHamburguesagourmet % 2) * precioHamburguesaGourmet)
+                  + (numHamburguesaBasica * precioHamburguesaBasica)));
 
       if (clubFanegas == 's') {
-        descuento = (int) (descuento + (precioTotal - descuento) * 0.12);
+        descuento = (descuento + (precioTotal - descuento) * 0.12);
         aPagar = precioTotal - descuento;
       } else {
         aPagar = precioTotal - descuento;
@@ -79,7 +78,7 @@ public class Ej3 {
           (numHamburguesaBasica * precioHamburguesaBasica)
               + (numHamburguesagourmet * precioHamburguesaGourmet);
       if (clubFanegas == 's') {
-        descuento = (int) (precioTotal * 0.12);
+        descuento = (precioTotal * 0.12);
         aPagar = precioTotal - descuento;
       } else {
         aPagar = precioTotal;
