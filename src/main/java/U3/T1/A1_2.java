@@ -2,6 +2,9 @@ package U3.T1;
 
 import java.util.Scanner;
 
+// Diseñar una función a la que se le pasen dos enteros y muestre todos los números comprendidos
+// entre ellos.
+
 public class A1_2 {
   public static void main(String[] args) {
 
