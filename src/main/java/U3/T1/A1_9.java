@@ -11,6 +11,20 @@ public class A1_9 {
 
     System.out.println("Introduzca un número");
     int num = sc.nextInt();
+
+    fDivisoresPrimos(num);
+  }
+
+  public static void fDivisoresPrimos(int num) {
+
+    System.out.print("Son divisores primos de " + num + " : ");
+
+    for (int i = 1; i <= num; i++) {
+
+      if (num % i == 0 && fEsPrimo(i)) {
+        System.out.print(i + " ");
+      }
+    }
   }
 
   public static boolean fEsPrimo(int num) {
