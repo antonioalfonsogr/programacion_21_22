@@ -15,9 +15,8 @@ public class A1_12 {
   }
 
   static int fFactorial(int n) {
-    if (n == 1) {
-      return 1;
-    }
+    if (n == 0) return 1;
+    if (n == 1) return 1;
     return fFactorial(n - 1) * n;
   }
 }
