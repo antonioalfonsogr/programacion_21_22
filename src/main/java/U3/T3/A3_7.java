@@ -46,9 +46,9 @@ public class A3_7 {
     System.out.println("Notas medias alumnos:");
 
     int[] mediaAlumnos = new int[5];
-    for (int i = 0; i < 5; i++) {
+    for (int i = 0; i < 3; i++) {
       int media = 0;
-      for (int j = 0; j < 3; j++) {
+      for (int j = 0; j < 5; j++) {
         media = notasTrimeste[i][j] + media;
       }
       mediaAlumnos[i] = media / 3;
