@@ -25,15 +25,36 @@ public class E4_2 {
     }
 
     System.out.println(Arrays.toString(palabrasUsuario));
-    System.out.println(Arrays.toString(colores));
 
     String[] esColor = new String[0];
     String[] noEsColor = new String[0];
+    int indEsColor = 0;
+    int indNoEsColor = 0;
+    int j;
+    boolean bEsColor = false;
 
     for (int i = 0; i < palabrasUsuario.length; i++) {
-      for (int j = 0; j < colores.length; j++) {
-        if (palabrasUsuario[i] == colores[j]) {}
+      for (j = 0; j < colores.length; j++) {
+        bEsColor = false;
+        if (palabrasUsuario[i].equals(colores[j])) {
+          bEsColor = true;
+          break;
+        }
+      }
+      if (bEsColor) {
+        esColor = Arrays.copyOf(esColor, esColor.length + 1);
+        esColor[indEsColor++] = palabrasUsuario[i];
+      } else {
+        noEsColor = Arrays.copyOf(noEsColor, noEsColor.length + 1);
+        noEsColor[indNoEsColor++] = palabrasUsuario[i];
       }
     }
+
+    String[] arResultado = new String[esColor.length + noEsColor.length];
+
+    System.arraycopy(esColor, 0, arResultado, 0, esColor.length);
+    System.arraycopy(noEsColor, 0, arResultado, esColor.length, noEsColor.length);
+
+    System.out.println(Arrays.toString(arResultado));
   }
 }
