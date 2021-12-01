@@ -29,9 +29,12 @@ public class E4_6 {
           }
         }
         if (repetido) {
-          if (j > 0) {
-            j--;
-            }else i--;
+         if (j > 0) {
+           j--;
+           }else {
+           i--;
+           j=matriz.length-1;
+         };
         } else {
           matriz[i][j] = numRandom;
           if (numRandom < min) min = numRandom;
