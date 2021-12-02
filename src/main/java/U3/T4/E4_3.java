@@ -29,7 +29,10 @@ public class E4_3 {
     for (int i = 0; i < mesaOcupacion[1].length; i++) {
       mesaOcupacion[1][i] = (int) (Math.random() * 5);
     }
-    System.out.println(Arrays.deepToString(mesaOcupacion));
+
+    for (int[] fila : mesaOcupacion) {
+      System.out.println(Arrays.toString(fila));
+    }
 
     int numComensales;
     boolean yaSentados = false;
@@ -43,7 +46,7 @@ public class E4_3 {
             "Lo siento, no admitimos grupos de 6, haga grupos de 4 personas como máximo e intente de nuevo");
         numComensales = sc.nextInt();
       }
-
+      if (numComensales == -1) break;
       for (int i = 0; i < mesaOcupacion[1].length; i++) {
         yaSentados = false;
         if (mesaOcupacion[1][i] == 0) {
@@ -67,7 +70,12 @@ public class E4_3 {
         }
       }
       if (!yaSentados) System.out.println("Lo siento, en estos momentos no queda sitio");
-    } while (numComensales != -1);
+
+      for (int[] fila : mesaOcupacion) {
+        System.out.println(Arrays.toString(fila));
+      }
+
+    } while (true);
 
     System.out.println("Gracias, Hasta pronto.");
   }
