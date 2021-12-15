@@ -26,6 +26,7 @@ public class Ej1 {
       resultado_parcial += '-';
     }
 
+
     do{
       System.out.println(resultado_parcial);
       System.out.println("Introduzca una letra:");
@@ -34,16 +35,15 @@ public class Ej1 {
      resultado_parcial = palabraAhorcado(cadena_a_adivinar, resultado_parcial, letra);
     }while (!cadena_a_adivinar.equalsIgnoreCase(resultado_parcial));
 
+    System.out.println("Felicidades, Has ganado");
   }
   public static String palabraAhorcado (String cadena_a_adivinar, String resultado_parcial, char letra){
-    resultado_parcial = "";
-
+    StringBuilder caaSB = new StringBuilder(resultado_parcial);
     for (int i = 0; i < cadena_a_adivinar.length(); i++) {
       if (cadena_a_adivinar.charAt(i)==letra){
-          resultado_parcial += letra;
-      }else resultado_parcial += '-';
+          caaSB.setCharAt(i,letra);
+      }
     }
-
-      return resultado_parcial;
+      return caaSB.toString();
   }
 }
