@@ -16,34 +16,37 @@ public class Ej1 {
     // NOTA: La palabra a adivinar no contendrá tildes ni caracteres extraños, además será en
     // minúsculas para simplificar el ejercicio.
 
-      Scanner sc = new Scanner(System.in);
+    Scanner sc = new Scanner(System.in);
 
-      String cadena_a_adivinar = "programacion";
-      String resultado_parcial = "";
-      char letra;
+    String cadena_a_adivinar = "programacion";
+    String resultado_parcial = "";
+    char letra;
 
     for (int i = 0; i < cadena_a_adivinar.length(); i++) {
       resultado_parcial += '-';
     }
 
-
-    do{
+    do {
       System.out.println(resultado_parcial);
       System.out.println("Introduzca una letra:");
       letra = sc.nextLine().charAt(0);
 
-     resultado_parcial = palabraAhorcado(cadena_a_adivinar, resultado_parcial, letra);
-    }while (!cadena_a_adivinar.equalsIgnoreCase(resultado_parcial));
+      resultado_parcial = palabraAhorcado(cadena_a_adivinar, resultado_parcial, letra);
+    } while (!cadena_a_adivinar.equalsIgnoreCase(resultado_parcial));
 
     System.out.println("Felicidades, Has ganado");
   }
-  public static String palabraAhorcado (String cadena_a_adivinar, String resultado_parcial, char letra){
-    StringBuilder caaSB = new StringBuilder(resultado_parcial);
+
+  public static String palabraAhorcado(
+      String cadena_a_adivinar, String resultado_parcial, char letra) {
+
+    StringBuilder rpSB = new StringBuilder(resultado_parcial);
+
     for (int i = 0; i < cadena_a_adivinar.length(); i++) {
-      if (cadena_a_adivinar.charAt(i)==letra){
-          caaSB.setCharAt(i,letra);
+      if (cadena_a_adivinar.charAt(i) == letra) {
+        rpSB.setCharAt(i, letra);
       }
     }
-      return caaSB.toString();
+    return rpSB.toString();
   }
 }
