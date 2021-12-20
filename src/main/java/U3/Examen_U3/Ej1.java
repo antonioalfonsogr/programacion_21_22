@@ -58,7 +58,7 @@ public class Ej1 {
       if (x[i][j] < min) min = x[i][j];
     }
     for (i = 0; i < x.length; i++) {
-      if (x[i][j] > max) max = x[i][j];
+      if (x[oi][oj] > max) max = x[oi][oj];
     }
 
     if (x[oi][oj] == max && x[oi][oj] == min) return true;
