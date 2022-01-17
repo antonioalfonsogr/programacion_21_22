@@ -1,11 +1,12 @@
-package U4.T1.A1;
+package U4.T1.A4;
 
 public class CuentaCorriente {
 
   private int saldo;
   private int limiteDescubierto;
-  private String nombre;
-  private String dni;
+  public String nombre;
+  String dni;
+  private static String Banco;
 
   public CuentaCorriente(String nombre, String dni) {
 
@@ -13,6 +14,20 @@ public class CuentaCorriente {
     this.dni = dni;
     this.saldo = 0;
     this.limiteDescubierto = -50;
+  }
+
+  public CuentaCorriente(int saldo) {
+    this.nombre = "";
+    this.dni = "";
+    this.saldo = saldo;
+    this.limiteDescubierto = 0;
+  }
+
+  public CuentaCorriente(int saldo, int limiteDescubierto, String dni) {
+    this.nombre = "";
+    this.dni = dni;
+    this.saldo = saldo;
+    this.limiteDescubierto = limiteDescubierto;
   }
 
   public boolean sacarDinero(int aSacar) {
@@ -43,6 +58,7 @@ public class CuentaCorriente {
     System.out.println("DNI: " + this.dni);
     System.out.println("Saldo: " + this.saldo);
     System.out.println("Limite de Descubierto: " + this.limiteDescubierto);
+    System.out.println("Banco: " + CuentaCorriente.getBanco());
     System.out.println();
   }
 
@@ -52,5 +68,13 @@ public class CuentaCorriente {
 
   public void setSaldo(int saldo) {
     this.saldo = saldo;
+  }
+
+  public static String getBanco() {
+    return Banco;
+  }
+
+  public static void setBanco(String banco) {
+    Banco = banco;
   }
 }

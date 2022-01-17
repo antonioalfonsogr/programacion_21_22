@@ -1,11 +1,11 @@
-package U4.T1.A1;
+package U4.T1.A3;
 
 public class CuentaCorriente {
 
   private int saldo;
   private int limiteDescubierto;
-  private String nombre;
-  private String dni;
+  public String nombre;
+  String dni;
 
   public CuentaCorriente(String nombre, String dni) {
 
@@ -13,6 +13,20 @@ public class CuentaCorriente {
     this.dni = dni;
     this.saldo = 0;
     this.limiteDescubierto = -50;
+  }
+
+  public CuentaCorriente(int saldo) {
+    this.nombre = "";
+    this.dni = "";
+    this.saldo = saldo;
+    this.limiteDescubierto = 0;
+  }
+
+  public CuentaCorriente(int saldo, int limiteDescubierto, String dni) {
+    this.nombre = "";
+    this.dni = dni;
+    this.saldo = saldo;
+    this.limiteDescubierto = limiteDescubierto;
   }
 
   public boolean sacarDinero(int aSacar) {
