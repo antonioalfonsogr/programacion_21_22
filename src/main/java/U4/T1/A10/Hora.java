@@ -5,21 +5,22 @@ public class Hora {
   private int horas;
   private int minutos;
   private int segundos;
-
-  public Hora(int horas, int minutos, int segundos) {
-    this.horas = horas;
-    this.minutos = minutos;
-    this.segundos = segundos;
-  }
-
-  public void annadirSegundos(int n) {}
+  public boolean horasBien = true;
+  public boolean minutosBien = true;
+  public boolean segundosBien = true;
 
   public int getHoras() {
     return horas;
   }
 
   public void setHoras(int horas) {
-    this.horas = horas;
+    if (horas >= 0 && horas <= 24) {
+      this.horas = horas;
+      horasBien = true;
+    } else {
+      System.out.println("La hora tiene que ser menor o igual a 24");
+      horasBien = false;
+    }
   }
 
   public int getMinutos() {
@@ -27,7 +28,13 @@ public class Hora {
   }
 
   public void setMinutos(int minutos) {
-    this.minutos = minutos;
+    if (minutos >= 0 && minutos <= 60) {
+      this.minutos = minutos;
+      minutosBien = true;
+    } else {
+      System.out.println("Los minutos tienen que ser menor o igual a 60");
+      minutosBien = false;
+    }
   }
 
   public int getSegundos() {
@@ -35,6 +42,40 @@ public class Hora {
   }
 
   public void setSegundos(int segundos) {
-    this.segundos = segundos;
+    if (segundos >= 0 && segundos <= 60) {
+      this.segundos = segundos;
+      segundosBien = true;
+    } else {
+      System.out.println("Los segundos tienen que ser menor o igual a 60");
+      segundosBien = false;
+    }
+  }
+
+  public Hora(int horas, int minutos, int segundos) {
+    setHoras(horas);
+    setMinutos(minutos);
+    setSegundos(segundos);
+  }
+
+  public String mostrasHora() {
+    return "La hora introducida es " + horas + ":" + minutos + ":" + segundos;
+  }
+
+  public void annadirSegundos(int n) {
+
+    segundos += n;
+
+    while (segundos > 59) {
+      segundos -= 60;
+      minutos++;
+      if (minutos > 59) {
+        minutos = 0;
+        horas++;
+        if (horas > 23) {
+          horas = 0;
+          minutos = 0;
+        }
+      }
+    }
   }
 }
