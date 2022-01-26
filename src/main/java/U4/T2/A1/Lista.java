@@ -50,7 +50,7 @@ public class Lista {
       }
       aux[ind] = num;
       for (int i = ind + 1; i < indice + 1; i++) {
-        aux[i] = listaArray[i];
+        aux[i] = listaArray[i - 1];
       }
 
     } else {
@@ -65,10 +65,11 @@ public class Lista {
         aux[i] = listaArray[i];
       }
     }
-    indice++;
-    for (int i = 0; i < indice; i++) {
+
+    for (int i = 0; i < indice + 1; i++) {
       listaArray[i] = aux[i];
     }
+    indice++;
   }
 
   // Añadir al final de la lista los elementos de otra lista que se pasa como parámetro.
@@ -110,20 +111,24 @@ public class Lista {
   public int buscaNum(int num) {
     int ind = -1;
     for (int i = 0; i < indice + 1; i++) {
-      if (listaArray[i] == num) ind = i;
+      if (listaArray[i] == num) {
+        ind = i;
+        break;
+      }
     }
     return ind;
   }
 
   // Representar la lista con una cadena de caracteres.
 
-  public void representaCadena() {
+  public String representaCadena() {
 
     String cadena = "";
 
-    for (int i = 0; i < indice + 1; i++) {
+    for (int i = 0; i < indice; i++) {
       cadena += listaArray[i] + " ";
     }
+    return cadena;
   }
 
   // setter and getter
@@ -142,5 +147,9 @@ public class Lista {
 
   public void setIndice(int indice) {
     this.indice = indice;
+  }
+
+  public void tamaño() {
+    System.out.println(listaArray.length);
   }
 }
