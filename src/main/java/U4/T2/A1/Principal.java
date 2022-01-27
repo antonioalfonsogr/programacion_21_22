@@ -2,9 +2,9 @@ package U4.T2.A1;
 
 public class Principal {
   public static void main(String[] args) {
-    //
+
     Lista lista1 = new Lista();
-    Lista lista2 = new Lista(50);
+    Lista lista2 = new Lista(5);
 
     lista1.insertarFinal(12);
     System.out.println(lista1.representaCadena());
@@ -32,15 +32,18 @@ public class Principal {
     lista2.insertarFinal(27);
     System.out.println(lista2.representaCadena());
 
+    lista1.insertarArray(lista2);
+    System.out.println(lista1.representaCadena());
+
     lista2.insertarArray(lista1);
     System.out.println(lista2.representaCadena());
 
-    lista2.eliminaEnIndice(2);
-    System.out.println(lista2.representaCadena());
+    lista1.eliminaEnIndice(2);
+    System.out.println(lista1.representaCadena());
 
-    System.out.println(lista2.devuelveEnIndice(1));
+    System.out.println(lista1.devuelveEnIndice(1));
 
-    System.out.println(lista2.buscaNum(22));
+    System.out.println(lista1.buscaNum(22));
     System.out.println(lista2.buscaNum(100));
   }
 }
