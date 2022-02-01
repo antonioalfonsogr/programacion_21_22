@@ -19,11 +19,11 @@ public class Ej1 {
     Scanner sc = new Scanner(System.in);
 
     String cadena_a_adivinar = "programacion";
-    String resultado_parcial = "";
+    StringBuilder resultado_parcial = new StringBuilder();
     char letra;
 
     for (int i = 0; i < cadena_a_adivinar.length(); i++) {
-      resultado_parcial += '-';
+      resultado_parcial.append('-');
     }
 
     do {
@@ -31,8 +31,10 @@ public class Ej1 {
       System.out.println("Introduzca una letra:");
       letra = sc.nextLine().charAt(0);
 
-      resultado_parcial = palabraAhorcado(cadena_a_adivinar, resultado_parcial, letra);
-    } while (!cadena_a_adivinar.equalsIgnoreCase(resultado_parcial));
+      resultado_parcial =
+          new StringBuilder(
+              palabraAhorcado(cadena_a_adivinar, resultado_parcial.toString(), letra));
+    } while (!cadena_a_adivinar.equalsIgnoreCase(resultado_parcial.toString()));
 
     System.out.println("Felicidades, Has ganado");
   }

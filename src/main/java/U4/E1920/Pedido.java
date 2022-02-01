@@ -26,21 +26,19 @@ public class Pedido {
     this.fecha = Calendar.getInstance();
   }
 
-  // Método pasa fecha a String
-  private String metodoFechaString() {
-    String fechaString =
-        Integer.toString(fecha.get(Calendar.DATE))
-            + Integer.toString(fecha.get(Calendar.MONTH))
-            + Integer.toString(fecha.get(Calendar.YEAR));
-    return fechaString;
+  // Método mostrar fecha
+  public void metodoFecha() {
+    String dia, mes, annio;
+
+    dia = Integer.toString(fecha.get(Calendar.DATE));
+    mes = Integer.toString(fecha.get(Calendar.MONTH));
+    annio = Integer.toString(fecha.get(Calendar.YEAR));
+
+    System.out.println("Fecha: " + dia + "/" + mes + "/" + annio);
   }
 
   // Getter
   public Pizza getPizzaPedido() {
     return pizzaPedido;
-  }
-
-  public String getFecha() {
-    return metodoFechaString();
   }
 }

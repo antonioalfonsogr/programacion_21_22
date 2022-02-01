@@ -37,14 +37,15 @@ public class Pizzeria {
     } else {
       for (int i = 0; i < indicePedidos; i++) {
         System.out.println("Pedido número: " + (i + 1));
-        System.out.println("Fecha: " + pedidos[i].getFecha());
+        pedidos[1].metodoFecha();
         pedidos[1].getPizzaPedido().mostrarInfoPizza();
+        System.out.println();
       }
     }
   }
 
   // Método mostrar num pedidos pizzeria
   public void mostrarNumPedidos() {
-    System.out.println("La pizzeria ha recibido " + pedidos.length + " pedidos");
+    System.out.println("La pizzeria ha recibido " + indicePedidos + " pedidos");
   }
 }

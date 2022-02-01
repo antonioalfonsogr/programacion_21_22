@@ -36,5 +36,27 @@ public class Principal {
     System.out.println();
     p3.mostrarInfoPizza();
     System.out.println();
+
+    Pizzeria telepizza = new Pizzeria();
+    Pizzeria dominoS = new Pizzeria(2);
+
+    telepizza.addPedido(new Pedido());
+    telepizza.mostrarNumPedidos();
+    System.out.println();
+    telepizza.mostrarPedidos();
+
+    Pedido ped1 = new Pedido(p1);
+    ped1.metodoFecha();
+    ped1.getPizzaPedido().mostrarInfoPizza();
+    System.out.println();
+    Pedido ped2 = new Pedido(p2);
+    Pedido ped3 = new Pedido(p2);
+
+    dominoS.addPedido(ped1);
+    dominoS.addPedido(ped2);
+    dominoS.addPedido(ped3);
+
+    dominoS.mostrarNumPedidos();
+    dominoS.mostrarPedidos();
   }
 }
