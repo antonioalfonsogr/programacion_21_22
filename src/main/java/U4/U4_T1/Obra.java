@@ -118,7 +118,7 @@ public class Obra {
     this.viviendaObra.mostrar_informacion();
     System.out.println("Materiales: ");
     for (int i = 0; i < indiceMateriales; i++) {
-      System.out.println(listaMaterialesObra[i] + " ");
+      listaMaterialesObra[i].mostrar_informacion();
     }
     System.out.println("Mano de Obra: ");
     this.cuadrillaObra.mostrar_informacion();

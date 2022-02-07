@@ -4,13 +4,13 @@ import U5.T1.A1.Hora;
 
 import java.util.Objects;
 
-public class HoraExacta extends Hora {
+public class HoraExacta4 extends Hora {
 
   // Atributos
   protected Integer segundos;
 
   // Constructor
-  public HoraExacta(Integer horas, Integer minutos, Integer segundos) {
+  public HoraExacta4(Integer horas, Integer minutos, Integer segundos) {
     super(horas, minutos);
     this.segundos = segundos;
   }
@@ -58,9 +58,11 @@ public class HoraExacta extends Hora {
   @Override
   public boolean equals(Object o) {
     if (this == o) return true;
-    if (!(o instanceof HoraExacta)) return false;
-    HoraExacta that = (HoraExacta) o;
-    return Objects.equals(segundos, that.segundos);
+    if (!(o instanceof HoraExacta4)) return false;
+    HoraExacta4 that = (HoraExacta4) o;
+    return Objects.equals(segundos, that.segundos)
+        && Objects.equals(minutos, that.minutos)
+        && Objects.equals(horas, that.horas);
   }
 
   @Override
