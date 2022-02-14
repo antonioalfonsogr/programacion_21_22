@@ -26,6 +26,7 @@ public class Electrodomestico {
   protected colorEnum color;
   protected cunsumosEnergeticosEnum consumoEnergetico;
   protected Integer peso;
+  private Integer precioFinal;
 
   // Constructor por defecto
   public Electrodomestico() {
@@ -33,6 +34,7 @@ public class Electrodomestico {
     this.color = colorEnum.blanco;
     this.consumoEnergetico = cunsumosEnergeticosEnum.F;
     this.peso = 5;
+    this.precioFinal = calcularPrecioFinal();
   }
 
   // Constructor con el precio y peso. El resto por defecto
@@ -41,6 +43,7 @@ public class Electrodomestico {
     this.peso = peso;
     this.color = colorEnum.blanco;
     this.consumoEnergetico = cunsumosEnergeticosEnum.F;
+    this.precioFinal = calcularPrecioFinal();
   }
 
   // Constructor con todos los atributos
@@ -50,6 +53,7 @@ public class Electrodomestico {
     this.color = color;
     this.consumoEnergetico = consumoEnergetico;
     this.peso = peso;
+    this.precioFinal = calcularPrecioFinal();
   }
 
   // Getter de todos los atributos
@@ -69,8 +73,8 @@ public class Electrodomestico {
     return peso;
   }
 
-  // Método getPrecioFinal
-  public Integer getPrecioFinal() {
+  // Método calcularPrecioFinal
+  public Integer calcularPrecioFinal() {
     switch (consumoEnergetico) {
       case A:
         precio += 100;
@@ -116,7 +120,11 @@ public class Electrodomestico {
         + ", Peso:"
         + peso
         + ", Precio Final: "
-        + getPrecioFinal()
+        + precioFinal
         + "€)";
+  }
+
+  public Integer getPrecioFinal() {
+    return precioFinal;
   }
 }
