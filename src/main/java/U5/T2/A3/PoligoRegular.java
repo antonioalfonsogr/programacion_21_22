@@ -25,4 +25,8 @@ public abstract class PoligoRegular implements Figura {
   // Método getArea
   @Override
   public abstract Double getArea();
+
+  public static Integer getContadorPoligonos() {
+    return contadorPoligonos;
+  }
 }

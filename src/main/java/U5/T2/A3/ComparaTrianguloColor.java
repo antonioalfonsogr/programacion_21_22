@@ -9,6 +9,6 @@ public class ComparaTrianguloColor implements Comparator {
     if (!(t1 instanceof Triangulo)) return 0;
     Triangulo tri1 = (Triangulo) o;
     Triangulo tri2 = (Triangulo) t1;
-    return tri1.compareTo(tri2);
+    return tri1.color.toString().compareTo(tri2.color.toString());
   }
 }
