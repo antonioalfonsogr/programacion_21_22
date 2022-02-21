@@ -30,10 +30,13 @@ public class A4 {
     }
 
     for (int i = 0; i < texto.length(); i++) {
-      if (texto.charAt(i) == ' ') {}
+      if (texto.charAt(i) == ' ') {
+        numPalabras++;
+      }
     }
 
     System.out.println("Número de caracteres: " + texto.length());
     System.out.println("Número de lineas: " + numLineas);
+    System.out.println("Número de palabras: " + (numPalabras + numLineas));
   }
 }
