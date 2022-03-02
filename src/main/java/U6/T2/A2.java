@@ -11,6 +11,7 @@ public class A2 {
       ObjectInputStream in = new ObjectInputStream(fichero);
       num = in.readDouble();
       System.out.println(num);
+      in.close();
     } catch (IOException ex) {
       System.out.println("ERROR al leer en el fichero" + ex.getMessage());
     }

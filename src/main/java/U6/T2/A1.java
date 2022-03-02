@@ -1,10 +1,8 @@
 package U6.T2;
 
-import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
-import java.util.Objects;
 import java.util.Scanner;
 
 public class A1 {
@@ -19,6 +17,7 @@ public class A1 {
       FileOutputStream fichero = new FileOutputStream("FicherosBinarios/numDouble.dat");
       ObjectOutputStream out = new ObjectOutputStream(fichero);
       out.writeDouble(num);
+      out.close();
     } catch (IOException ex) {
       System.out.println("ERROR al escribir en el fichero");
     }
