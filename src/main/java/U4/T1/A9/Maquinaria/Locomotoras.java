@@ -2,7 +2,9 @@ package U4.T1.A9.Maquinaria;
 
 import U4.T1.A9.Personal.Mecanicos;
 
-public class Locomotoras {
+import java.io.Serializable;
+
+public class Locomotoras implements Serializable {
 
   private String matricula;
   private int potenciaMotorCV;

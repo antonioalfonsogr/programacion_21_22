@@ -1,6 +1,8 @@
 package U4.T1.A9.Personal;
 
-public class Mecanicos {
+import java.io.Serializable;
+
+public class Mecanicos implements Serializable {
 
   private String nombreCompleto;
   private int tlfno;

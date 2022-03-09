@@ -1,6 +1,22 @@
 package U4.T1.A9.Maquinaria;
 
-public class Trenes {
+import java.io.Serializable;
+import java.util.Arrays;
+
+public class Trenes implements Serializable {
+  @Override
+  public String toString() {
+    return "Trenes{"
+        + "loc="
+        + loc
+        + ", vag="
+        + Arrays.toString(vag)
+        + ", maxVagones="
+        + maxVagones
+        + ", vagonesActuales="
+        + vagonesActuales
+        + '}';
+  }
 
   private Locomotoras loc;
   private Vagones[] vag;
