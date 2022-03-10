@@ -8,5 +8,13 @@ public class A1 {
     // con una edad menor de 18, puesto que no podemos dar servicio a clientes menores de edad.
     // Pruébalo en una main, siendo aquí donde se capturan las excepciones.
 
+    try {
+
+    } catch (Exception errorEdad) {
+
+    }
+
+    // catch (Exception menorDeEdad) {
+    // }
   }
 }

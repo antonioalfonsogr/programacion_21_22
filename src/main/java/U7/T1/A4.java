@@ -25,13 +25,12 @@ public class A4 {
     ArrayList<String> palabrasRepetidas = new ArrayList<>();
     ArrayList<String> palabrasSinRepetir = new ArrayList<>();
 
-    boolean repetida;
-
     for (int i = 0; i < listaPalabrasFrase.size(); i++) {
       if (0 == Collections.frequency(palabrasSinRepetir, listaPalabrasFrase.get(i))) {
         palabrasSinRepetir.add(listaPalabrasFrase.get(i));
       } else {
         palabrasRepetidas.add(listaPalabrasFrase.get(i));
+        palabrasSinRepetir.removeAll(palabrasRepetidas);
       }
     }
 
