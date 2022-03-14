@@ -8,13 +8,25 @@ public class A1 {
     // con una edad menor de 18, puesto que no podemos dar servicio a clientes menores de edad.
     // Pruébalo en una main, siendo aquí donde se capturan las excepciones.
 
-    try {
+    /*
 
-    } catch (Exception errorEdad) {
+    try {
+      Cliente c1 = new Cliente("12345678A", "Pepe", 20, 200.0);
+      Cliente c2 = new Cliente("12345678A", "Pepe", 17, 200.0);
+      Cliente c3 = new Cliente("12345678A", "Pepe", -20, 200.0);
+    }
+
+
+
+    catch (ExcepcionMenorDeEdad menorDeEdad) {
+      System.out.println("Cliente menor de edad");
+    } catch (ExcepcionErrorEdad errorEdad) {
+      System.out.println("Edad introducida negativa");
+
+
 
     }
 
-    // catch (Exception menorDeEdad) {
-    // }
+      */
   }
 }
