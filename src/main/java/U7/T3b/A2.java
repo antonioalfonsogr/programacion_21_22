@@ -3,15 +3,13 @@ package U7.T3b;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Scanner;
 
-public class A1 {
+public class A2 {
   public static void main(String[] args) {
-    // Crea un HashMap cuya clave sea un Integer, y cuyos valores sean los nombres de algunos de tus
-    // compañeros. La clave ha de calcularse mediante un método que reciba un String que represente
-    // el dni, y devuelva la suma de sus dígitos.
-    // 46221877D -> 4+6+2+2+1+8+7+7=37
-    // Una vez guardados los elementos, deben mostrarse todos los elementos (clave-valor) del
-    // HasMap.
+    // Añada al programa anterior la siguiente funcionalidad. El programa pedirá al usuario un dni,
+    // calculará la clave que ha de consultar, comprobará que dicha clave existe, y, en tal caso,
+    // mostrará el valor asociado a esa clave en el HashMap.
 
     Map<Integer, String> mapa = new HashMap<>();
 
@@ -22,6 +20,14 @@ public class A1 {
     mapa.put(calculaClaveDni("44444444D"), "Manolo");
 
     System.out.println(mapa);
+
+    Scanner sc = new Scanner(System.in);
+    System.out.println("Introduzca DNI a consultar:");
+    String nuevoDni = sc.next();
+
+    if (mapa.containsKey(calculaClaveDni(nuevoDni))) {
+      System.out.println(mapa.get(calculaClaveDni(nuevoDni)));
+    } else System.out.println("No existe registro con esa clave");
   }
 
   public static Integer calculaClaveDni(String dni) {

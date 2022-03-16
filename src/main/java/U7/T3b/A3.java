@@ -3,15 +3,14 @@ package U7.T3b;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
 
-public class A1 {
+public class A3 {
   public static void main(String[] args) {
-    // Crea un HashMap cuya clave sea un Integer, y cuyos valores sean los nombres de algunos de tus
-    // compañeros. La clave ha de calcularse mediante un método que reciba un String que represente
-    // el dni, y devuelva la suma de sus dígitos.
-    // 46221877D -> 4+6+2+2+1+8+7+7=37
-    // Una vez guardados los elementos, deben mostrarse todos los elementos (clave-valor) del
-    // HasMap.
+    // Recorre el Map anterior, extrayendo cada pareja clave-valor, y mostrándolas, de tal forma que
+    // se escriban los datos así:
+    // La clave 37 está asociada al nombre "Pedro Gonzalez Jimenez".
+    // La clave ... está asociada al nombre ....
 
     Map<Integer, String> mapa = new HashMap<>();
 
@@ -22,6 +21,13 @@ public class A1 {
     mapa.put(calculaClaveDni("44444444D"), "Manolo");
 
     System.out.println(mapa);
+    System.out.println();
+
+    Set<Integer> claves = mapa.keySet();
+
+    for (int clave : claves) {
+      System.out.println("La clave " + clave + " está asociada al nombre " + mapa.get(clave));
+    }
   }
 
   public static Integer calculaClaveDni(String dni) {
