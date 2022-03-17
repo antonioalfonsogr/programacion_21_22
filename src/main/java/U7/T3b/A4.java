@@ -17,5 +17,11 @@ public class A4 {
     Traductor t1 = new Traductor("/home/graa/Escritorio/PROG/FicherosTexto/diccionario.txt");
 
     System.out.println(t1);
+
+    String frase1 = "hola mundo";
+    String frase2 = "gracias adios";
+
+    System.out.println(t1.traduceString(frase1));
+    System.out.println(t1.traduceString(frase2));
   }
 }
