@@ -1,8 +1,6 @@
 package U7.T4;
 
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.ObjectInputStream;
+import java.io.*;
 import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Scanner;
@@ -21,9 +19,11 @@ public class Principal {
 
     LinkedHashMap<String, Empleado> diccionarioDatosEmpledos = new LinkedHashMap<>();
 
+    String rutaFichero = "";
+
     if (opcionUsuario.equalsIgnoreCase("fichero")) {
       System.out.println("Escriba la ruta del fichero:");
-      String rutaFichero = sc.next();
+      rutaFichero = sc.nextLine();
 
       try {
         FileInputStream fichero = new FileInputStream(rutaFichero);
@@ -31,6 +31,8 @@ public class Principal {
         while (true) {
           Empleado emple = (Empleado) in.readObject();
           diccionarioDatosEmpledos.put(emple.getDni(), emple);
+
+          System.out.println(diccionarioDatosEmpledos);
         }
 
       } catch (IOException ex) {
@@ -50,15 +52,20 @@ public class Principal {
         String dniEmpleado = sc.next();
         System.out.println("Edad del Empleado:");
         Integer edadEmpleado = sc.nextInt();
+        sc.nextLine();
         System.out.println("altura del Empleado:");
         Double alturaEmpleado = sc.nextDouble();
+        sc.nextLine();
         System.out.println("Sueldo del Empleado:");
         Double sueldoEmpleado = sc.nextDouble();
+        sc.nextLine();
 
         Empleado emple =
             new Empleado(alturaEmpleado, nombreEmpleado, dniEmpleado, edadEmpleado, sueldoEmpleado);
 
         diccionarioDatosEmpledos.put(emple.getDni(), emple);
+
+        System.out.println(diccionarioDatosEmpledos);
 
         System.out.println("Desea introducir otro empleado (true or false)");
         otroEmpleado = sc.nextBoolean();
@@ -80,10 +87,12 @@ public class Principal {
       System.out.println("5. INSERTAR EMPLEADO/S");
       System.out.println("Seleccione una opción tecleando 1 al 5:");
       int menuUsuario = sc.nextInt();
+      sc.nextLine();
 
       switch (menuUsuario) {
         case 1:
           visualizarListado(diccionarioDatosEmpledos);
+          System.out.println(diccionarioDatosEmpledos);
           break;
         case 2:
           Boolean eliminarOtro;
@@ -96,6 +105,7 @@ public class Principal {
             System.out.println("Desea borrar otro Empleado (true or false):");
             eliminarOtro = sc.nextBoolean();
 
+            System.out.println(diccionarioDatosEmpledos);
           } while (eliminarOtro);
           break;
         case 3:
@@ -103,15 +113,18 @@ public class Principal {
           String dniAVisualizar = sc.next();
 
           visualizarEmpleado(diccionarioDatosEmpledos, dniAVisualizar);
+          System.out.println(diccionarioDatosEmpledos);
           break;
         case 4:
           System.out.println("Introduzca DNI del Empleado a modificar:");
           String dniAModificar = sc.next();
 
           modificarEmpleado(diccionarioDatosEmpledos, dniAModificar);
+          System.out.println(diccionarioDatosEmpledos);
           break;
         case 5:
           insertarEmpleado(diccionarioDatosEmpledos);
+          System.out.println(diccionarioDatosEmpledos);
           break;
         default:
           System.out.println("No ha seleccionado una operación correctamente");
@@ -123,6 +136,24 @@ public class Principal {
       System.out.println(diccionarioDatosEmpledos);
 
     } while (otroMenu);
+
+    if (opcionUsuario.equalsIgnoreCase("fichero")) {
+      try {
+        FileOutputStream fichero = new FileOutputStream(rutaFichero);
+        ObjectOutputStream out = new ObjectOutputStream(fichero);
+
+      } catch (IOException ex) {
+        System.out.println("Error al escribir el fichero");
+      }
+    } else {
+      try {
+        FileOutputStream fichero = new FileOutputStream("FicherosBinarios/");
+        ObjectOutputStream out = new ObjectOutputStream(fichero);
+
+      } catch (IOException ex) {
+        System.out.println("Error al escribir el fichero");
+      }
+    }
   }
 
   public static void visualizarListado(LinkedHashMap empleadosMapa) {
