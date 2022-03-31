@@ -16,5 +16,19 @@ public class Principal {
     ParCotizacion p1 = new ParCotizacion(f1, f2, 1.1, 0.11);
     ParCotizacion p2 = new ParCotizacion(f3, c1, 0.8, 0.12);
     ParCotizacion p3 = new ParCotizacion(c2, c3, 1.8, -0.13);
+
+    Exchange exchange = new Exchange();
+
+    exchange.addCotizacion(p1);
+    exchange.addCotizacion(p2);
+    exchange.addCotizacion(p3);
+
+    exchange.mostrarDivisasOrdenadas();
+
+    exchange.mostrarCotizacionesAlAlzaUnaHora();
+
+    exchange.mostrarCotizacionesAlAlzaUnaHora2();
+
+    exchange.obtenerCotizaciones("EUR");
   }
 }

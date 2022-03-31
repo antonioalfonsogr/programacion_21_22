@@ -26,9 +26,17 @@ public class Exchange implements Serializable {
 
   // Método obtenerCotizaciones(String simbolo)
 
-  public HashSet<ParCotizacion> obtenerCotizaciones(String simbolo) {
+  public Set<ParCotizacion> obtenerCotizaciones(String simbolo) {
+    Set<ParCotizacion> conjunto_pares = new LinkedHashSet<>();
 
-    return new HashSet<>();
+    Iterator<Divisa> it = mapaDivisasParCotizacion.keySet().iterator();
+    while (it.hasNext()) {
+      Divisa base = it.next();
+      if (base.getSimbolo().equals(simbolo)) {
+        conjunto_pares = mapaDivisasParCotizacion.get(base);
+      }
+    }
+    return conjunto_pares;
   }
 
   // Método mostrarCotizacionesAlAlzaUnaHora()
@@ -50,11 +58,37 @@ public class Exchange implements Serializable {
     }
   }
 
+  public void mostrarCotizacionesAlAlzaUnaHora2() {
+    Iterator<Map.Entry<Divisa, HashSet<ParCotizacion>>> it = mapaDivisasParCotizacion.entrySet().iterator();
+    while (it.hasNext()) {
+      Map.Entry<Divisa, HashSet<ParCotizacion>> entrada = it.next();
+
+      Iterator<ParCotizacion> it_cotizaciones = entrada.getValue().iterator();
+      while (it_cotizaciones.hasNext()) {
+        ParCotizacion par_cotizacion = it_cotizaciones.next();
+        if (par_cotizacion.getVariacionPorcentualUltimaHora() > 0) {
+          System.out.println(par_cotizacion);
+        }
+      }
+    }
+  }
+
   // Método addCotizacion(ParCotizacion cotizacion)
 
-  public void addCotizacion() {}
+  public void addCotizacion(ParCotizacion cotizacion) {
+    Divisa base = cotizacion.getDivisaBase();
+
+    if (mapaDivisasParCotizacion.containsKey(base)) {
+      mapaDivisasParCotizacion.get(base).add(cotizacion);
+    } else {
+      Set<ParCotizacion> conjunto_pares = new LinkedHashSet<>();
+      conjunto_pares.add(cotizacion);
+      mapaDivisasParCotizacion.put(base, (HashSet<ParCotizacion>) conjunto_pares);
+    }
+  }
 
   // Método guardarCotizaciones()
+
 
   public void guardarCotizaciones() {
     try {
