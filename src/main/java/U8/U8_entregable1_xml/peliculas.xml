@@ -1,0 +1,27 @@
+<cine>
+    <pelicula categoria="accion">
+        <titulo idioma="ingles">Mad Max</titulo>
+        <director pais="Reino Unido">George Miller</director>
+        <ticket>8</ticket>
+    </pelicula>
+    <pelicula categoria="animacion">
+        <titulo idioma="ingles">Inside Out</titulo>
+        <director pais="EE.UU.">Pete Docter</director>
+        <ticket>10</ticket>
+    </pelicula>
+    <pelicula categoria="ciencia ficción">
+        <titulo idioma="ingles">Terminator 2</titulo>
+        <director pais="EE.UU.">James Cameron</director>
+        <ticket>14</ticket>
+    </pelicula>
+    <pelicula categoria="drama">
+        <titulo idioma="español">Carne Trémula</titulo>
+        <director pais="España">Pedro Almodóvar</director>
+        <ticket>17</ticket>
+    </pelicula>
+    <pelicula categoria="comedia">
+        <titulo idioma="francés">Bienvenidos al Norte</titulo>
+        <director pais="Francia">Dany Boon</director>
+        <ticket>3</ticket>
+    </pelicula>
+</cine>
