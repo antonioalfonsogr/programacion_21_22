@@ -1,9 +1,6 @@
-package U9.T2;
+package U9.T3;
 
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,10 +12,12 @@ public class ADClassicModels {
     List<Employee> employeeList = new ArrayList<>();
 
     try {
-      Statement statement = con.createStatement();
-      statement.setQueryTimeout(30);
 
-      ResultSet rs = statement.executeQuery("select * from employees");
+      PreparedStatement statement = con.prepareStatement("select * from employees");
+
+      // statement.setString(1, "Murphy");
+
+      ResultSet rs = statement.executeQuery();
 
       while (rs.next()) {
 
