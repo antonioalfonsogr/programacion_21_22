@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objetos>
+	<objeto calidad="a1">
+		<altura>66</altura>
+		<edad>8</edad>
+		<peso>22</peso>
+	</objeto>
+	<objeto calidad="a2">
+		<altura>67</altura>
+		<edad>9</edad>
+		<peso>44</peso>
+	</objeto>
+	<objeto calidad="a3">
+		<altura>68</altura>
+		<edad>10</edad>
+		<peso>66</peso>
+	</objeto>
+	<objeto calidad="a4">
+		<altura>69</altura>
+		<edad>11</edad>
+		<peso>88</peso>
+	</objeto>
+	<objeto calidad="a5">
+		<altura>70</altura>
+		<edad>12</edad>
+		<peso>110</peso>
+	</objeto>
+	<objeto calidad="a6">
+		<altura>71</altura>
+		<edad>13</edad>
+		<peso>132</peso>
+	</objeto>
+	<objeto calidad="a7">
+		<altura>72</altura>
+		<edad>14</edad>
+		<peso>154</peso>
+	</objeto>
+	<objeto calidad="a8">
+		<altura>73</altura>
+		<edad>15</edad>
+		<peso>176</peso>
+	</objeto>
+	<objeto calidad="a9">
+		<altura>74</altura>
+		<edad>16</edad>
+		<peso>198</peso>
+	</objeto>
+	<objeto calidad="a10">
+		<altura>75</altura>
+		<edad>17</edad>
+		<peso>220</peso>
+	</objeto>
+</objetos>

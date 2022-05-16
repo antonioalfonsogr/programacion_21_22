@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<personas info="personas" otro="ejemplo">
+        
+    <!--<!- - COMENTARIO AÑADIDO DESDE DOM PERSONA 1- ->-->
+    <persona>
+        <nombre>Jose</nombre>
+        <edad>46</edad>
+    </persona>
+        
+    <!--<!- - COMENTARIO AÑADIDO DESDE DOM PERSONA 2- ->-->
+    <persona id="2">
+                
+        <nombre>María</nombre>
+                
+        <edad>51</edad>
+            
+    </persona>
+        
+    <!--<!- - COMENTARIO AÑADIDO DESDE DOM PERSONA 3- ->-->
+    <persona id="3">
+                
+        <nombre>Raul</nombre>
+                
+        <edad>22</edad>
+            
+    </persona>
+    
+    <persona Pelo="Largo">
+        <nombre>Pepe</nombre>
+        <edad>56</edad>
+    </persona>
+</personas>
