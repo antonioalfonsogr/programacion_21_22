@@ -45,20 +45,9 @@ public class RecorridoStax {
 
           tagName = startTag.getName().getLocalPart();
 
-          switch (tagName) {
-            case "titulo":
-              tagActual = "titulo";
-              break;
-            case "autor":
-              tagActual = "autor";
-              break;
-            case "editorial":
-              tagActual = "editorial";
-              break;
-            case "paginas":
-              tagActual = "paginas";
-              break;
-          }
+          System.out.println(tagName);
+
+          tagActual = tagName;
 
         } else if (xmlEvent.isStartDocument()) {
 
@@ -73,11 +62,13 @@ public class RecorridoStax {
           Characters texto = xmlEvent.asCharacters();
 
           if (!texto.getData().contains("\n")) {
-
             if (!tagActual.equals("")) {
+              System.out.println(tagActual);
+
               switch (tagActual) {
                 case "titulo":
                   aTitulo = texto.getData();
+                  System.out.println(aTitulo);
                   break;
                 case "autor":
                   aAutor = texto.getData();
@@ -88,6 +79,8 @@ public class RecorridoStax {
                 case "paginas":
                   aPaginas = Integer.parseInt(texto.getData());
                   break;
+                default:
+                  System.out.println("default");
               }
             }
           }
@@ -96,6 +89,13 @@ public class RecorridoStax {
           EndElement endtag = xmlEvent.asEndElement();
 
           if (endtag.getName().getLocalPart().equals("libro")) {
+
+            System.out.println(aPaginas);
+            System.out.println(aTitulo);
+            System.out.println(aEditorial);
+            System.out.println(aAutor);
+            System.out.println();
+
             if (aPaginas > lmpPaginas) {
 
               lmpTitulo = aTitulo;

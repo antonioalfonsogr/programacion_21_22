@@ -85,11 +85,21 @@ public class ModificacionDOM {
 
         Element e = (Element) nl.item(i);
 
-        if (e.getTagName().equalsIgnoreCase("editorial")) {
+        NodeList nl2 = e.getChildNodes();
 
-          Element pais = doc.createElement("pais");
-          pais.setTextContent("España");
-          e.appendChild(pais);
+        for (int j = 0; j < nl2.getLength(); j++) {
+
+          if (nl2.item(j).getNodeType() == Node.ELEMENT_NODE) {
+
+            Element e2 = (Element) nl2.item(j);
+
+            if (e2.getTagName().equalsIgnoreCase("editorial")) {
+
+              Element pais = doc.createElement("pais");
+              pais.setTextContent("España");
+              e2.appendChild(pais);
+            }
+          }
         }
       }
     }

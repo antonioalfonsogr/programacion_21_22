@@ -7,7 +7,10 @@
                 
         <autor>Cervantes</autor>
                 
-        <editorial>Anaya</editorial>
+        <editorial>
+            Anaya
+            <pais>España</pais>
+        </editorial>
                 
         <paginas>500</paginas>
             
@@ -19,7 +22,10 @@
                 
         <autor>Frank Kafka</autor>
                 
-        <editorial>Anagrama</editorial>
+        <editorial>
+            Anagrama
+            <pais>España</pais>
+        </editorial>
                 
         <paginas>250</paginas>
             
@@ -31,7 +37,10 @@
                 
         <autor>Geoge Orwell</autor>
                 
-        <editorial>Edelvives</editorial>
+        <editorial>
+            Edelvives
+            <pais>España</pais>
+        </editorial>
                 
         <paginas>125</paginas>
             
@@ -43,7 +52,10 @@
                 
         <autor>Aldous Huxley</autor>
                 
-        <editorial>Anaya</editorial>
+        <editorial>
+            Anaya
+            <pais>España</pais>
+        </editorial>
                 
         <paginas>200</paginas>
             
@@ -55,16 +67,22 @@
                 
         <autor>Naomi Klein</autor>
                 
-        <editorial>Planeta</editorial>
+        <editorial>
+            Planeta
+            <pais>España</pais>
+        </editorial>
                 
         <paginas>600</paginas>
             
     </libro>
     
     <libro>
-        <titulo>dsfg</titulo>
-        <autor>dfgdgasg</autor>
-        <editorial>fgtghdfgdfsg</editorial>
-        <paginas>234423</paginas>
+        <titulo>zdfsg</titulo>
+        <autor>dfsgf</autor>
+        <editorial>
+            sdfg
+            <pais>España</pais>
+        </editorial>
+        <paginas>45</paginas>
     </libro>
 </biblioteca>
