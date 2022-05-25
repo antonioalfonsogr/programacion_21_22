@@ -19,15 +19,15 @@
         <paginas>125</paginas>
     </libro>
     <libro>
-        <titulo>Un mundo feliz</titulo>
-        <autor>Aldous Huxley</autor>
-        <editorial>Anaya</editorial>
-        <paginas>200</paginas>
-    </libro>
-    <libro>
         <titulo>La teoría del Shock</titulo>
         <autor>Naomi Klein</autor>
         <editorial>Planeta</editorial>
         <paginas>600</paginas>
+    </libro>
+    <libro>
+        <titulo>Un mundo feliz</titulo>
+        <autor>Aldous Huxley</autor>
+        <editorial>Anaya</editorial>
+        <paginas>200</paginas>
     </libro>
 </biblioteca>

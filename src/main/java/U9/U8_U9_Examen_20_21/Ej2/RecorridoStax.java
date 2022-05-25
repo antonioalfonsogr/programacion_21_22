@@ -31,31 +31,17 @@ public class RecorridoStax {
       String aEditorial = "";
       int aPaginas = 0;
 
+      String tagActual = "";
+
       while (xmlReader.hasNext()) {
 
         XMLEvent xmlEvent = xmlReader.nextEvent();
-
-        String tagName;
-
-        String tagActual = "";
 
         if (xmlEvent.isStartElement()) {
 
           StartElement startTag = xmlEvent.asStartElement();
 
-          tagName = startTag.getName().getLocalPart();
-
-          System.out.println(tagName);
-
-          tagActual = tagName;
-
-        } else if (xmlEvent.isStartDocument()) {
-
-          System.out.println("Comienzo del parseado del documento");
-
-        } else if (xmlEvent.isEndDocument()) {
-
-          System.out.println("Fin del parseado del documento");
+          tagActual = startTag.getName().getLocalPart();
 
         } else if (xmlEvent.isCharacters()) {
 
@@ -63,12 +49,10 @@ public class RecorridoStax {
 
           if (!texto.getData().contains("\n")) {
             if (!tagActual.equals("")) {
-              System.out.println(tagActual);
 
               switch (tagActual) {
                 case "titulo":
                   aTitulo = texto.getData();
-                  System.out.println(aTitulo);
                   break;
                 case "autor":
                   aAutor = texto.getData();
@@ -79,8 +63,6 @@ public class RecorridoStax {
                 case "paginas":
                   aPaginas = Integer.parseInt(texto.getData());
                   break;
-                default:
-                  System.out.println("default");
               }
             }
           }
@@ -89,12 +71,6 @@ public class RecorridoStax {
           EndElement endtag = xmlEvent.asEndElement();
 
           if (endtag.getName().getLocalPart().equals("libro")) {
-
-            System.out.println(aPaginas);
-            System.out.println(aTitulo);
-            System.out.println(aEditorial);
-            System.out.println(aAutor);
-            System.out.println();
 
             if (aPaginas > lmpPaginas) {
 
@@ -107,10 +83,8 @@ public class RecorridoStax {
             aTitulo = "";
             aAutor = "";
             aEditorial = "";
-            lmpPaginas = 0;
+            aPaginas = 0;
           }
-
-          tagActual = "";
         }
       }
 
